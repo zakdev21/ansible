@@ -1,5 +1,3 @@
----
-
-- name: Set TimeZone for RHEL VM's
-  timezone:
+- name: Set timezone to Asia/Tokyo
+  community.general.timezone:
     name: Melbourne/Australia
