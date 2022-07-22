@@ -1,6 +1,5 @@
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+---
+
+- name: Set TimeZone for RHEL VM's
+  timezone:
+    name: Melbourne/Australia
