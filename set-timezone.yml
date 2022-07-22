@@ -1,3 +1,5 @@
-- name: Set timezone to Asia/Tokyo
-  community.general.timezone:
-    name: Melbourne/Australia
+---
+  tasks:
+  - name: "update hostnames"
+    hostname:
+      name: "web01"
