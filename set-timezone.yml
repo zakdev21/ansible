@@ -1,7 +1,17 @@
 ---
-- name: Update web servers
+- name: user module demo
   tasks:
-  - name: Ensure apache is at the latest version
-    ansible.builtin.yum:
-      name: httpd
-      state: latest
+    - name: user example present
+      ansible.builtin.user:
+        name: vra
+        password: "Netapp01$"
+        groups:
+          - wheel
+          - adm
+        state: "present"
+        shell: "/bin/bash"
+        system: false
+        create_home: true
+        home: "/home/example"
+        comment: "Ansible example"
+        generate_ssh_key: true
